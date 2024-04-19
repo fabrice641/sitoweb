@@ -1,3 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: none;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Asap", sans-serif;
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  text-align: center;
+  overflow-x: hidden;
+  background: black;
+  color: white;
+}
+
+:root {
+  --angle: 0deg;
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('messi.gif');
+  background-size: cover;
+  --origin: bottom center;
+  background-position: var(--origin);
+  transform-origin: center;
+  transform: scale3d(1.3, 1.3, 1);
+  filter: hue-rotate(var(--angle)) url(#noise);
+  animation: anim 30s linear infinite;
+}
+@keyframes anim {
+  0% {
+    --angle: 0deg;
+  }
+  100% {
+    --angle: 360deg;
+  }
+}
+
+svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+
+main {
+  position: relative;
+  mix-blend-mode: color-dodge;
+}
+section {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h2 {
+  font-size: 1.2rem;
+}
+#credit {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+a {
+  color: currentColor;
+}
+
+
+
+/* Variables */
+:root {
+  --color-bg: #aaa;
+  --color-fg: #555;
+  --color-dynamic: #f00;
+  --ratio: 1.618;
+}
+
+/* Specific features */
+.fragment {
+  background: var(--color-bg);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fragment::after {
+  animation: noise 9s steps(10) infinite;
+  background: url('silva.gif');
+  content: '';
+  height: 500%;
+  left: -100%;
+  opacity: 0.6;
+  position: fixed;
+  top: -100%;
+  width: 500%;
+}
+
+@keyframes noise {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(-3%, -6%);
+  }
+
+  20% {
+    transform: translate(-9%, 3%);
+  }
+
+  30% {
+    transform: translate(12%, -9%);
+  }
+
+  40% {
+    transform: translate(-15%, 12%);
+  }
+
+  50% {
+    transform: translate(-3%, -3%);
+  }
+
+  60% {
+    transform: translate(12%, 0%);
+  }
+
+  70% {
+    transform: translate(0%, 12%);
+  }
+
+  80% {
+    transform: translate(3%, 3%);
+  }
+
+  90% {
+    transform: translate(-15%, 15%);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* General features */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+::selection {
+  color: var(--color-bg);
+  background-color: var(--color-fg);
+}
+
+body {
+  /* Fonts from fontlibrary.org - see in <head> */
+  font-family: 'EBGaramond12Regular', 'Garamond', 'Palatino Linotype', Palatino, Palladio, 'URW Palladio L', 'Book Antiqua', Baskerville, 'Bookman Old Style', 'Bitstream Charter', 'Nimbus Roman No9 L', Garamond, 'Apple Garamond', 'ITC Garamond Narrow', 'New Century Schoolbook', 'Century Schoolbook', 'Century Schoolbook L', Georgia, serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: normal;
+  font-style: normal; 
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+  quotes: "«\00A0" "\00A0»" "“" "”";
+  font-size: 3rem;
+  letter-spacing: 0.01rem;
+  line-height: var(--ratio);
+  margin: 0 auto;
+  padding: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+@media screen and (min-width: 18.75em) { /* 300px */
+  body {
+    /* Fluid typography
+     * calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+    font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1280 - 300)));
+  }
+}
+
+@media screen and (min-width: 80em) { /* 1280 px */
+  body {
+    font-size: 3.0rem;
+  }
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 0.01rem;
+  margin: 0;
+  line-height: var(--ratio);
+  font-size: inherit;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+}
+
+h1 {
+  font-size: calc(var(--ratio) * 2em);
+}
+
+h2 {
+  font-size: calc(var(--ratio) * 1em);
+}
+
+
+
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Roboto:wght@300;400;500;700&display=swap");
 
 *,
@@ -41,7 +290,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image: url(https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/aa462558-0106-4268-9864-d34a4f35531f);
+  background-image: url('ronaldo.gif');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1242,7 +1491,7 @@ body, div, h1, h2, ul, li, i, a, p, h3, footer {
     border: 0;
 }
 body {
-    background-image: url(https://sitecore-cd.shangri-la.com/-/media/Shangri-La/boracay_boracayresort/about/2023_SLBO_Explore-Boracay.jp);
+
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -2178,20 +2427,121 @@ section img {
 }
 
 /* Selettore per la sezione */
-body{
 
-background-image:url('messi.gif');
-
-
-}
 
 
 .medal-svg-logo {
   width: 100%;
   height: 100%;
   opacity: 0.4;
-  background-size: auto 85%;
+  background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("messi.gif");
+}
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black');
+
+body {
+  font-family: 'Archivo Black', sans-serif;
+  background-color: #2c2c2c;
+  // background: radial-gradient(ellipse at center, #444756 0%,#1d1b26 100%);
+  background: radial-gradient(ellipse at center, #29382c 0%, #0c100d 100%);
+  color: #fff;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.main-wrapper {
+  position: relative;
+  padding: 0;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  position: relative;
+  font-size: 60px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.noise-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  overflow: hidden;
+  z-index: 10;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.75) 100%);
+  }
+}
+
+.noise {
+  position: absolute;
+  top: -500px;
+  right: -500px;
+  bottom: -500px;
+  left: -500px;
+  background: transparent url(https://www.dropbox.com/s/h7ab1c82ctzy83n/noise.png?raw=1) 0 0;
+  background-size: 320px 320px;
+	opacity: .35;
+	animation: noise 1s steps(8,end) infinite both;
+}
+
+@keyframes noise {
+  0% {
+    transform: translateX(0px,0px); }
+  10% {
+    transform: translate(-100px, 100px);
+  }
+  20% {
+    transform: translate(150px, -100px);
+  }
+  30% {
+    transform: translate(-100px,100px);
+  }
+  40% {
+    transform: translate(100px, -150px);
+  }
+  50% {
+    transform: translate(-100px, 200px);
+  }
+  60% {
+    transform: translate(-200px, -100px);
+  }
+  70% {
+    transform: translateY(50px, 100px);
+  }
+  80% {
+    transform: translate(100px, -150px);
+  }
+  90% {
+    transform: translate(0px, 200px);
+  }
+  100% {
+    transform: translate(-100px, 100px);
+  }
 }

@@ -21,10 +21,31 @@
     <script src="index.js"></script>
  
 
-<div style="margin-bottom:300px;"></div>
+
+
+
   
 
 <div class="container-fluid">
+
+
+
+<!--
+SVG Noise filter #4
+-->
+<div id='bg'></div>
+
+
+
+    <div>
+
+      <h2>BEST WOMAN AND BEST MAN FOOTBALL PLAYERS IN THE WORLD</h1>
+      
+    </div>
+
+
+
+
 
 
         <div class="left-content">
@@ -131,8 +152,6 @@
               </div>
 
               <div class="artist">
-                  <audio src="messi.mp3"controls loop="true"autoplay="true"></audio>
-
                 <img
                   src="brasil.jpeg"
                   alt="" />
@@ -170,6 +189,22 @@
           
           
           
+<svg>
+  <filter id='noise'>
+    <feTurbulence type='fractalNoise' baseFrequency='0.3' numOctaves='1' seed='10'>
+      <!--
+<animate attributeName="seed" dur="0.5s" values="1;5" repeatCount="indefinite" />
+
+      <animate attributeName="baseFrequency" dur="5s" values="-0.01;0.01;-0.01" repeatCount="indefinite" />
+-->
+    </feTurbulence>
+    <feDisplacementMap xChannelSelector="B" yChannelSelector="G" scale="50" in="SourceGraphic">
+      <animate attributeName="scale" dur="8s" values="50;1;1;50" repeatCount="indefinite" />
+    </feDisplacementMap>
+  </filter>
+</svg>
+
+
 
 
            
