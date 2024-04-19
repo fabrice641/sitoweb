@@ -2176,19 +2176,11 @@ section img {
 }
 
 /* Selettore per la sezione */
-body{    /* Imposta le dimensioni dell'altezza in base alle tue esigenze */
+body{
 
-    /* Sfondo multiplo */
-    background-image: url('femminile.jpg'), url('messi.gif'), url('mbappe.jpeg'), url('silva.gif'), url('france.jpg'), url('debinha.gif'), url('debinha.jpg'), url('ronaldo.gif');
-    
-    /* Posizione di ogni immagine di sfondo */
-    background-position: center top, center center, center center, center center, center bottom, center bottom;
+background-image:url('messi.gif');
 
-    /* Dimensionamento di ogni immagine di sfondo */
-    background-size: cover, cover, cover, cover, cover, cover;
 
-    /* Ripetizione dell'immagine di sfondo */
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
 }
 
 
