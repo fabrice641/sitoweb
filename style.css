@@ -2176,9 +2176,7 @@ section img {
 }
 
 /* Selettore per la sezione */
-.opening-ceremony {
-    /* Imposta le dimensioni dell'altezza in base alle tue esigenze */
-    height: 500px; /* Adatta l'altezza come necessario */
+body{    /* Imposta le dimensioni dell'altezza in base alle tue esigenze */
 
     /* Sfondo multiplo */
     background-image: url('femminile.jpg'), url('messi.gif'), url('mbappe.jpeg'), url('silva.gif'), url('france.jpg'), url('debinha.gif'), url('debinha.jpg'), url('ronaldo.gif');
