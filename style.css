@@ -1,3 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Staatliches&display=swap');
+
+:root {
+  --bg-color-1: #01BAEF;
+  --bg-color-2: #20BF55;
+  --font: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: var(--font);
+  background-image: linear-gradient(
+    var(--bg-color-1), var(--bg-color-2)
+  );
+}
+
+h1 {
+  color: #fff;
+  animation: fadeInRight 1s ease-in-out;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+@use "sass:math";
+
+@mixin sizer($width, $height: $width) {
+	height: $height;
+	width: $width;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+
+ul {
+	list-style: none;
+}
+
+body {
+	background: linear-gradient(
+		#030455,
+		#03045e,
+		#023e8a,
+		#0077b6,
+		#0096c7,
+		#00b4d8,
+		#48cae4,
+		#90e0ef,
+		#ade8f4,
+		#caf0f8,
+		#cff1f9
+	);
+	border-top: 10vh solid #00b4d8;
+	border-bottom: 10vh solid #00b4d8;
+	filter: url(#goo);
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	width: 100vw;
+}
+
+h1 {
+	color: #fff;
+	font-size: 3.6em;
+	margin: 25vw;
+	position: absolute;
+	width: 50vw;
+}
+
+.particle {
+	animation: fall 15s infinite;
+	background-color: #00b4d8;
+	border-radius: 50%;
+	@include sizer(100px);
+	position: absolute;
+	top: -20%;
+
+	&:nth-of-type(2n) {
+		@include sizer(60px);
+	}
+	&:nth-of-type(3n) {
+		@include sizer(120px);
+	}
+
+	@for $i from 1 through 15 {
+		$randomValue: math.random();
+
+		&:nth-of-type(#{$i}) {
+			animation-delay: #{$i}s;
+			left: math.percentage($randomValue);
+		}
+	}
+}
+
+@keyframes fall {
+	0% {
+		top: -20%;
+	}
+	30% {
+		top: 0%;
+	}
+	100% {
+		top: 100%;
+	}
+}
+
+
+
 @import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
 * {
   margin: 0;
