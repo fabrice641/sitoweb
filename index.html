@@ -24,27 +24,19 @@
 
 
 
-<body data-role="page" class="w-100 h-100 container-fluid bg-dark px-3 text-decoration-underline text-xxl-center"></body>
+<body data-role="page" class="w-100 h-100 container-fluid bg-dark px-3 text-decoration-underline text-xxl-center ">
 
-
-
-  <script src="https://vjs.zencdn.net/7.18.1/video.min.js"></script>
-  <script>
-    let playerInstance = new videojs("my-video");
-    playerInstance.on("ready", () => {
-      let div = document.createElement("div");
-      div.innerHTML = ` 
-                    <div style="background-color: #4043A4; font-size: 1rem; position: absolute; top: 0px; left: 0; right: 0; margin: 0 auto; text-align: center; padding: 7px; white-space: nowrap; ">Monument Valley: <strong>23</strong> &nbsp; Shiprock: <strong>32</strong></div> 
-                    `;
-      console.log(playerInstance)
-      playerInstance.el().appendChild(div)
-    })
-  </script>
+  <h1 class="display-2  text-decoration-underline text-white text-xxl-center">Best Woman and Man Football Players in the World</h1>
 
 
 
 
-  <header data-role="header"class="header">
+  
+
+
+
+
+  <header data-role="header"class="header container-fluid bg-white text-dark">
 
 
     <form action="">
@@ -55,13 +47,17 @@
 
     </form>
 
+    <dialog open>
 
+    <audio src="messi.mp3" class="w-100" controls loop="true" autoplay="true"></audio>
+
+    </dialog>
 
   </header>
 
 
     <div class="progress">
-        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
       </div>
 
 
@@ -78,8 +74,6 @@
     <main data-role="main"class="ui-content">
         <dialog onpointerover="true">
 
-        <h1 class="display-2  text-decoration-underline text-dark text-xxl-center">Best Women and Men Football Players in the World</h1>
-        <audio src="messi.mp3" class="nav-link" controls loop="true" autoplay="true"></audio>
 
         </dialog>
 
@@ -169,7 +163,7 @@
         <span></span>
         </div>
 
-<div id="my-video"
+<div data-inline="true"id="my-video"
 class="video-js vjs-default-skin vjs-fill vjs-fluid"
 controls
 muted
@@ -186,12 +180,9 @@ data-setup="{}"class="modal-dialog-fullscreen">
 
     <footer data-role="footer">
 
-        <nav id="navbar-example2" class="navbar navbar-light ">
-          <a class="navbar-brand" href="#"></a>
+     
 
-
-
-          <div class="col-sm-5 text-center row-cols-5">
+          <div class="w-100 text-center">
 
           
 
@@ -216,7 +207,6 @@ data-setup="{}"class="modal-dialog-fullscreen">
 
         </div>
 
-        </nav>
 
         </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
