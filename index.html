@@ -11,16 +11,18 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/235004aab8.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    
     <link rel="shortcut icon" href="femminile.jpg" type="image/x-icon">
 </head>
 
-<body class="w-100 h-100 container-fluid">
+<body class="w-100 h-100 container-fluid bg-dark px-3 text-decoration-underline text-xxl-center">
 
 
     <div class="progress">
         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
       </div>
-
 
 
     <div class="collapse" id="navbarToggleExternalContent">
@@ -151,34 +153,113 @@
 
     </main>
 
+    <section>
+
+      <div class="box">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+
+<div class="modal-dialog-fullscreen">
+      <video class="container-fluid w-100 h-100" src="italia.mp4"controls loop="true" autoplay="true"id="video"></video>
+
+</div>
+
+    </section>
+
     <footer>
 
-        <nav id="navbar-example2" class="navbar navbar-light bg-dark px-3">
+        <nav id="navbar-example2" class="navbar navbar-light ">
           <a class="navbar-brand" href="#"></a>
-          <ul class="nav nav-pills">
-            <li class="nav-item">
-              <a class="nav-link" href="#fat"></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#mdo"></a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"></a>
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="#one"></a></li>
-                <li><a class="dropdown-item" href="#two"></a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#three"></a></li>
-              </ul>
-            </li>
-          </ul>
+
+          <div class="text-center"></div>
+
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>        
+
+            
+
         </nav>
-        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
-            <video class="container-fluid w-100 h-100" src="italia.mp4"controls loop="true" autoplay="true"></video>
 
         </div>
       
+<style type="text/css">
 
+
+
+HTML CSSResult Skip Results Iframe
+body{
+  margin: 0;
+  padding: 0;
+  background: steelblue;
+}
+
+.box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box span{
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.box span:nth-child(2)
+{
+  animation-delay: -0.2s;
+}
+
+.box span:nth-child(3)
+{
+  animation-delay: -0.4s;
+}
+
+@keyframes animate{
+  
+  0%{
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+
+
+
+
+
+
+
+</style>
 
     </footer>
 
