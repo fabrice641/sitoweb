@@ -355,7 +355,7 @@ data-setup="{}"class="modal-dialog-fullscreen">
                     <div class="column is-6 is-offset-3">
                      
                         <h2 class="subtitle">
-
+                        Calcio Femminile
                         </h2>
                         <div class="box">
                             <div class="field is-grouped">
@@ -372,6 +372,21 @@ data-setup="{}"class="modal-dialog-fullscreen">
                     </div>
                 </div>
             </div>
+
+        <script type="text/javascript">
+
+
+            var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://calciofemminileitaliano.it", true);
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    alert(xhr.responseText);
+  }
+};
+xhr.send();
+
+
+        </script>
 
     <script async type="text/javascript" src="../js/bulma.js"></script>
 
