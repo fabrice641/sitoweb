@@ -54,6 +54,61 @@
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>
+
+        <svg style="position: absolute; width: 0; height: 0" aria-hidden="true">
+	<symbol id="football-ball" viewBox="-50 -50 100 100">
+		<defs>
+			<clipPath id="c">
+				<circle r="50" />
+			</clipPath>
+			<path id="h" d="M -8.5 -14.5 h 17 l 7 14.5 -7 14.5 h -17 l -7 -14.5 z" />
+			<path id="s" d="M 0 0 h 50" fill="none" stroke="currentColor" />
+			<path id="l" transform="translate(50 0) rotate(120)" d="M 0 0 h 50" />
+		</defs>
+
+		<g clip-path="url(#c)">
+			<circle r="48.5" fill="hsl(0, 0%, 100%)" stroke="currentColor" stroke-width="3" />
+
+			<g fill="none" stroke="currentColor" stroke-width="3">
+				<g transform="rotate(0)">
+					<use href="#s" />
+					<use href="#l" />
+				</g>
+				<g transform="rotate(60)">
+					<use href="#s" />
+					<use href="#l" />
+				</g>
+				<g transform="rotate(120)">
+					<use href="#s" />
+					<use href="#l" />
+				</g>
+				<g transform="rotate(180)">
+					<use href="#s" />
+					<use href="#l" />
+				</g>
+				<g transform="rotate(240)">
+					<use href="#s" />
+					<use href="#l" />
+				</g>
+				<g transform="rotate(300)">
+					<use href="#s" />
+					<use href="#l" />
+				</g>
+			</g>
+
+			<g fill="currentColor">
+				<use href="#h" />
+				<use href="#h" transform="rotate(0) translate(50 0)" />
+				<use href="#h" transform="rotate(60) translate(50 0)" />
+				<use href="#h" transform="rotate(120) translate(50 0)" />
+				<use href="#h" transform="rotate(180) translate(50 0)" />
+				<use href="#h" transform="rotate(240) translate(50 0)" />
+				<use href="#h" transform="rotate(300) translate(50 0)" />
+			</g>
+		</g>
+	</symbol>
+</svg>
+        
     </header>
 
     <!-- Main Content -->
