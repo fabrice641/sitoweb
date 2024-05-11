@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Scope+One|Shrikhand');
 
 body, html {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1932025/ghost-signs-low-rez.jpg);
   background-size: cover;
   background-color: rebeccapurple; 
   color: #fff;
