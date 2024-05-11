@@ -1,3 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Scope+One|Shrikhand');
+
+body, html {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1932025/ghost-signs-low-rez.jpg);
+  background-size: cover;
+  background-color: rebeccapurple; 
+  color: #fff;
+  display: grid;
+  font-family: 'Scope One', serif;
+  font-size: 22px;
+  height: 100%;
+}
+
+div {
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Shrikhand', cursive;
+}
+
+div {
+  
+}
+
 @charset "UTF-8";
 /*! bulma.io v1.0.0 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
