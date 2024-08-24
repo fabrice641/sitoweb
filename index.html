@@ -189,3 +189,66 @@
 </body>
 
 </html>
+
+    <script>
+        // Array of keywords
+        const keywords = [
+            "Il calcio femminile italiano",
+            "Albo d'oro calcio femminile italiano",
+            "Photo agency calcio femminile italiano",
+            "Campionato di calcio femminile italiano",
+            "Tutto calcio femminile italiano",
+            "Storia del calcio femminile italiano",
+            "Dati calcio femminile italiano",
+            "Squadre calcio femminile italiano",
+            "Calcio femminile italiano olimpiadi",
+            "Calcio femminile italiano alle olimpiadi",
+            "Campionato italiano calcio femminile Serie A",
+            "Calcio italiano femminile",
+            "Serie A femminile calcio",
+            "Italia U16 femminile",
+            "Roma calcio femminile Under 17",
+            "FIGC calcio femminile",
+            "Calcio femminile italiano Serie B",
+            "Calcio femminile B",
+            "Calcio femminile Italia",
+            "Calcio femminile campionato italiano",
+            "Calcio femminile italiano Serie C",
+            "Calcio femminile italiano storia",
+            "Calcio femminile italiano E.T.S. recensioni",
+            "Albo d'oro campionato italiano calcio femminile",
+            "Campionato italiano calcio femminile Wikipedia",
+            "Vincitori campionato italiano di calcio femminile",
+            "Calcio femminile italiano E.T.S",
+            "Calcio femminile Italia Inghilterra",
+            "Calcio femminile italiano foto",
+            "Finale calcio italiano femminile",
+            "Italia femminile",
+            "Calcio femminile vs calcio maschile",
+            "Calcio femminile italiano.it",
+            "Ilaria italiano calcio femminile",
+            "Calcio calcio",
+            "Il calcio",
+            "Milan calcio",
+            "Calcio femminile nazionale",
+            "Calcio femminile Serie C",
+            "US female soccer team",
+            "Calcio femminile Italia Wikipedia",
+            "Z score calculation",
+            "Calcio a 5 femminile"
+        ];
+
+        // Function to get a random item from the array
+        function getRandomKeyword() {
+            const randomIndex = Math.floor(Math.random() * keywords.length);
+            return keywords[randomIndex];
+        }
+
+        // Set the text content on page load
+        window.onload = function() {
+            const textContent = document.getElementById('text-content');
+            textContent.textContent = getRandomKeyword();
+        };
+    </script>
+
+
