@@ -32,6 +32,22 @@
     <link rel="shortcut icon" href="femminile.jpg" type="image/x-icon">
     
     
+    <style>
+        /* Add custom CSS for background image slideshow */
+        body {
+            background: url('mbappe.gif') no-repeat center center fixed;
+            background-size: cover;
+            animation: backgroundSlideshow 15s infinite;
+        }
+
+        @keyframes backgroundSlideshow {
+            0% { background-image: url('mbappe.gif'); }
+            33% { background-image: url('mbappe.jpeg'); }
+            66% { background-image: url('ronaldo.gif'); }
+            100% { background-image: url('mbappe.gif'); }
+        }
+    </style>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.remove('loading');
