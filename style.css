@@ -1,4 +1,115 @@
- /* Header */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+    background-image: url('campionesse-di-calcio.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.5); /* Effetto tridimensionale */
+    line-height: 1.6; /* Migliora la leggibilità */
+}
+
+header, footer, main {
+    position: relative;
+    z-index: 1;
+    padding: 20px; /* Spaziatura aggiuntiva */
+}
+
+header {
+    background-color: #e03c31; /* Gazzetta pink */
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px; /* Maggiore spazio per il titolo */
+}
+
+header h1 {
+    font-weight: 700;
+    font-style: italic;
+    font-size: 2.5rem; /* Dimensione del font migliorata */
+}
+
+.navbar-nav .nav-link {
+    font-weight: 700;
+    font-style: italic;
+    padding: 0 15px; /* Maggiore spazio tra i link */
+}
+
+.carousel-caption h5 {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.75rem; /* Maggiore padding */
+    border-radius: 0.5rem; /* Angoli arrotondati più accentuati */
+    font-size: 1.25rem; /* Dimensione del font migliorata */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #e03c31;
+    border-radius: 50%; /* Angoli arrotondati per le icone */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px; /* Spaziatura aggiuntiva */
+}
+
+footer a {
+    font-weight: 700;
+    font-style: italic;
+    color: #fff; /* Colore del testo dei link */
+}
+
+.btn-info {
+    background-color: #e03c31;
+    border: none;
+    border-radius: 5px; /* Angoli arrotondati per i bottoni */
+}
+
+.btn-info:hover {
+    background-color: #c02c1e;
+}
+
+.contact-form button {
+    background-color: #e03c31;
+    border: none;
+    border-radius: 5px; /* Angoli arrotondati per il bottone di contatto */
+}
+
+.contact-form button:hover {
+    background-color: #c02c1e;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    border-radius: 10px; /* Maggiore arrotondamento per le immagini */
+}
+
+video {
+    object-fit: cover;
+    border-radius: 10px; /* Maggiore arrotondamento per i video */
+}
+
+#spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    display: none;
+}
+
+.spinner-border {
+    width: 4rem; /* Maggiore dimensione per il loader */
+    height: 4rem;
+    border-width: 0.5em;
+}
+
+
+
+/* Header */
 header h1 {
     font-weight: 700; /* Grassetto per l'intestazione */
     font-style: italic; /* Corsivo per l'intestazione */
