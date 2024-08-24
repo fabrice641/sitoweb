@@ -17,8 +17,8 @@
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- Custom CSS - Initial load with media="print" -->
+    <link id="custom-stylesheet" rel="stylesheet" href="style.css" media="print">
     
     <!-- Shortcut icon -->
     <link rel="shortcut icon" href="femminile.jpg" type="image/x-icon">
@@ -28,6 +28,29 @@
             font-family: 'Roboto', sans-serif;
             color: #333;
             background-color: #f8f9fa;
+            background-image: url('campionesse-di-calcio.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: -1;
+        }
+
+        header, footer, main {
+            position: relative;
+            z-index: 1;
         }
 
         header {
@@ -87,6 +110,14 @@
             background-color: #c02c1e;
         }
     </style>
+    
+    <script>
+        // JavaScript to switch the stylesheet to 'all' after the page has loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            var stylesheet = document.getElementById('custom-stylesheet');
+            stylesheet.media = 'all';
+        });
+    </script>
 </head>
 
 <body>
